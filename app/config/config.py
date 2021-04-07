@@ -1,10 +1,8 @@
-import os
 
 
 class BaseConfig(object):
     TIMEZONE = "Asia/Shanghai"
     # C:/Users/zzw/Documents/GitHub/sanic-app
-    BASE_DIR = os.path.dirname(os.path.dirname(__file__))
     DEBUG = False
 
 
