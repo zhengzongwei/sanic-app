@@ -1,7 +1,9 @@
+# sanic-app Created by zhengzongwei on 2021/04/07
+# Copyright (c) 2021 zhengzongwei. All rights reserved.
+
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-print(BASE_DIR,'BASE_DIR')
-LOG_MAX_BYTES = 1024*1024*200
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+
 
 
