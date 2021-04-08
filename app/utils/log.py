@@ -10,7 +10,6 @@ from logging import handlers
 def config_log(log_level="INFO"):
     logs_dir = os.path.join(os.path.dirname(__file__), "logs")
 
-
     # log_path = os.path.join()
     if os.path.exists(logs_dir) and os.path.isdir(logs_dir):
         pass
