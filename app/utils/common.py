@@ -48,12 +48,27 @@ def now_timestrap():
     return time.time()
 
 
-def timestrap(str_time: str) -> int:
+def timestrap(str_time: str) -> float:
     """
     formatting time to timestrap
     """
     return time.mktime(str_time, "%Y-%m-%d %H:%M:%S")
 
+def timer(func):
+    """
+    calculate function run time
+    """
+    def wrap(*args,**kwargs):
+        start = time.time()
+        res = func(*args,**kwargs)
+        stop = time.time()
+        print("%s Running %f" %(func.__name__,stop-start))
+        return res
+    return wrap
+
+
+
 
 if __name__ == '__main__':
-    print(generate_smscode())
+    # print(generate_smscode())
+    print(now_time())
