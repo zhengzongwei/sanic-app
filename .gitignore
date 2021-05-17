@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 *.xml
 .idea/sanic-app.iml
+.vscode/settings.json

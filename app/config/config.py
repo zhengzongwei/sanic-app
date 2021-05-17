@@ -2,6 +2,9 @@
 # Copyright (c) 2021 zhengzongwei. All rights reserved.
 
 import logging
+from sqlalchemy.ext.asyncio import create_async_engine
+
+
 class BaseConfig(object):
     TIMEZONE = "Asia/Shanghai"
     # C:/Users/zzw/Documents/GitHub/sanic-app
@@ -9,9 +12,14 @@ class BaseConfig(object):
     access_log = False
 
 
-
 class DevelopConfig(BaseConfig):
     DEBUG = True
+    USERNAME = 'develop'
+    PASSWORD = 'develop'
+    HOSTNAME = '127.0.0.1'
+    PORT = 3306
+    DBNAME = 'snaic'
+    SQLALCHEMY_DATABASE_URI = create_async_engine("mysql+aiomysql://%s:%s@%s:%d/%s" % (USERNAME, PASSWORD, HOSTNAME, PORT, DBNAME))
 
 
 class ProductConfig(BaseConfig):
