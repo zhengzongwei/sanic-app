@@ -3,10 +3,11 @@
 
 from sanic import Sanic
 
-from api import api_v1
+from api.v1 import api
+
 
 def create_app(config=None):
     app = Sanic(__name__)
 
-    app.blueprint(api_v1, url_prefix="/")
+    app.blueprint(api.api_v1, url_prefix="/")
     return app
