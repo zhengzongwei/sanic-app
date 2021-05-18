@@ -11,5 +11,3 @@ async def index(request):
         "api": "v1"
     }
     return json(data)
-
-# async def books(request):
