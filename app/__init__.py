@@ -3,7 +3,7 @@
 
 from sanic import Sanic
 
-from api.v1 import api
+from app.api.v1 import api
 
 
 def create_app(config=None):
